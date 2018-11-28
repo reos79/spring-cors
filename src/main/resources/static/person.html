@@ -1,0 +1,31 @@
+
+<head>
+<script src="jquery-3.3.1.min.js"></script>
+</head>
+
+
+<h1>PRUEBA</h1>
+
+<script>
+
+$(document).ready(function(e) {	
+	$.ajax({
+		headers: { 
+	        'Accept': 'application/json',
+	        'Content-Type': 'application/json' 
+	    },
+	    
+	    type: 'POST',
+	    url: 'http://localhost:9797/persons',
+	    data: JSON.stringify({ 
+	    	  'name': 'reos',
+	    	}),
+	    dataType: 'json',	
+	    success: function(msg){
+	        alert('wow' + msg);
+	    }
+	});
+    
+});
+
+</script>
